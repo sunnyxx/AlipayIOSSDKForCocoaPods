@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 	s.libraries = 'crypto', 'ssl'
 	#s.dependency 'SBJson', '3.0'
 
-	s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/AlipayIOSSDK/AlipayIOSSDK"' }
+	s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/AlipayIOSSDK/AlipayIOSSDK"' },{ 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/AlipayIOSSDK/AlipayIOSSDK"' }
 	
 	# RSA
 	#s.subspec 'AlipayIOSSDK/RSA' do |ss|
