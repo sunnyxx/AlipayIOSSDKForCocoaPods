@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
 	s.source_files = 'AlipayIOSSDK/*.{h,m}', 'AlipayIOSSDK/json/*.{h,m}', 'AlipayIOSSDK/RSA/*.h'
 	s.preserve_paths = 'AlipayIOSSDK/*.a'
 	s.requires_arc = true
-	s.resources = 'Alixpay.bundle'
+	s.resources = 'Alixpay.bundle/**/*.*'
 	s.frameworks = 'SystemConfiguration', 'CFNetwork'
 	s.libraries = 'AlixPay_arc', 'AlipayRsa', 'crypto', 'ssl'
 
