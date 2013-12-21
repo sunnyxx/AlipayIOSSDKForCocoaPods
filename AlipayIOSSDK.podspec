@@ -14,5 +14,4 @@ Pod::Spec.new do |s|
 	# RSA
 	#s.subspec 'AlipayIOSSDK/RSA' do |ss|
 	#ss.source_files = 'AlipayIOSSDK/RSA/*.h'
-  end
 end
