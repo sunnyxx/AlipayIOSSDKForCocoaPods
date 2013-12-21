@@ -3,17 +3,12 @@ Pod::Spec.new do |s|
 	s.version      = '1.0.0'
 	s.source   	= { :git => 'https://github.com/sunnyxx/AlipayIOSSDKForCocoaPods.git'}
 	s.source_files = 'AlipayIOSSDK/*.{h,m}', 'AlipayIOSSDK/json/*.{h,m}', 'AlipayIOSSDK/RSA/*.h'
-
 	s.preserve_paths = 'AlipayIOSSDK/*.a'
 	s.requires_arc = true
 	s.resources = 'Alixpay.bundle'
-	s.frameworks = 'SystemConfiguration', 'CFNetwork', 'AlixPaylib_arc', 'AlipayRsaLib'
-	s.libraries = 'crypto', 'ssl'
-	#s.dependency 'SBJson', '3.0'
+	s.frameworks = 'SystemConfiguration', 'CFNetwork'
+	s.libraries = 'AlixPay_arc', 'AlipayRsa', 'crypto', 'ssl'
 
-	s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/AlipayIOSSDK/AlipayIOSSDK"', 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/AlipayIOSSDK/AlipayIOSSDK"'}
+	s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/AlipayIOSSDK/AlipayIOSSDK"'}
 	
-	# RSA
-	#s.subspec 'AlipayIOSSDK/RSA' do |ss|
-	#ss.source_files = 'AlipayIOSSDK/RSA/*.h'
 end
