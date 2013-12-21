@@ -8,9 +8,11 @@ Pod::Spec.new do |s|
 	s.requires_arc = true
 	s.resources = 'Alixpay.bundle'
 	s.frameworks = 'SystemConfiguration', 'CFNetwork'
-	s.libraries = 'AlixPaylib_arc', 'libcrypto', 'libssl'
+	s.libraries = 'AlixPaylib_arc', 'AlipayRsaLib', 'libcrypto', 'libssl'
 	#s.dependency 'SBJson', '3.0'
 
+	s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/AlipayIOSSDK/AlipayIOSSDK"' }
+	
 	# RSA
 	#s.subspec 'AlipayIOSSDK/RSA' do |ss|
 	#ss.source_files = 'AlipayIOSSDK/RSA/*.h'
