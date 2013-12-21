@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 	s.resources = 'Alixpay.bundle' 
 	s.frameworks = 'SystemConfiguration', 'CFNetwork'
 	s.libraries = 'AlixPaylib_arc', 'libcrypto', 'libssl'
-	s.dependency 'SBJson'
+	s.dependency 'SBJson', '3.0'
 
 	# RSA
 	#s.subspec 'AlipayIOSSDK/RSA' do |ss|
